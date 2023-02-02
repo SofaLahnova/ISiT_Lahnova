@@ -12,6 +12,6 @@ def df_site() -> None:
 #    data = {'name': ['hello', 'world'], 'url': ["http://hello.com/home", "https://world.org/"]}
 # Create DataFrame
 #    df = pd.DataFrame(data)
-    df['domain'] = df['url'].map(lambda x: str(x).partition("://")[2].partition("/")[0])
+    df['domain_of_url'] = df['url'].map(lambda x: str(x).partition("://")[2].partition("/")[0])
     print(df)
     df.to_csv('df_new_site.csv')
